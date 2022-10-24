@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> About </title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <meta name="keywords" content="jerseys, professional, sports, children, adults, gift">
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+        }
+
+        .container {
+
+            background-color: rgb(240, 248, 255, 0.8);
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+
+
+        img {
+            max-width: 400px;
+            max-height: 700px;
+
+        }
+
+        .image {
+            flex: 50%;
+            text-align: left;
+        }
+
+        .text {
+            flex: 50%;
+            text-align: left;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #7a1a04c7;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript">
+    </script>
+    <script>
+        var picArr = ["images/sami.png", "images/eyal.png", "images/sam.png", "images/clark.png"];
+        var index = 0;
+        var messages = ["Sami Hakkarainen: from Los Gatos, CA. My hobbies are hanging out, playing guitar, and sports. A fun fact about me is that my dog has a 36 inch vert.", "Eyal Sharon: from Framingham, MA. My hobbies are  soccer and playing trumpet. A fun fact about me is that I'd be 6'2 without scoleosis.", "Sam Miller: from Arrowhead, WI. My hobbies are mossing in Dewick, learning, and hanging out in the JCC. A fun fact about me is that I hate injustice.", "Clark Bolin: from Fond du Lac, WI. My hobbies are fishing, weight lifting, and hockey. A fun fact about me is that I grew up in Alaska."];
+
+        $(document).ready(function () {
+            startShow();
+        })
+
+        function startShow() {
+            $("#slide img").delay(5000).fadeOut(2000, newSlide);
+        }
+
+        function newSlide() {
+            index++;
+            index = index == picArr.length ? 0 : index;
+            $("#slide img").attr("src", picArr[index]);
+            $("#slide img").fadeIn(2000, startShow).delay(5000);
+            $("#slide").text(messages[index]);
+        }
+
+
+
+    </script>
+</head>
+<header>
+
+    <a href="#homelogo"><img style="width: 50px; height: 50px; float: left; margin: 10px;" src="celtics.png" alt="Logo">
+    </a>
+    <h1 style="width: 100%">About Us</h1>
+
+</header>
+
+<nav>
+    <div id=back>
+
+        <ul>
+            <li><a href="#contact">Contact Us </a></li>
+            <li><a href="#Abt">Abt Us </a></li>
+            <li><a href="#Catalog"> Catalog </a></li>
+            <li><a href="#Cart"> Cart </a></li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+
+    <h2>
+        Meet the Team
+    </h2>
+    <br>
+
+    <div class="container">
+        <div id="slide" class="text" style="margin: 16px;">Sami Hakkarainen: from Los Gatos, CA. My hobbies are hanging
+            out, playing guitar, and sports. A fun fact about me is that my dog has a 36 inch vert.</div>
+        <div id="slide" name="pic" class="image">
+            <img src="images/sami.png">
+        </div>
+    </div>
+
+
+    <br />
+    </div>
+
+    <footer> Thanks for Visiting Us! <br>
+
+        <a href=#topofPage target="_blank"> Top Of Page</a>
+
+
+        </div>
+        <br><br>
+    </footer>
+
+</body>
+
+</html>
